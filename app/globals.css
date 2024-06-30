@@ -102,3 +102,28 @@
 .wrapper {
   @apply mx-auto max-w-[1440px] px-sm sm:px-md md:px-lg;
 }
+
+a#facebook:focus svg path,
+a#facebook:hover svg path {
+  fill: url(#facebook-bg);
+}
+
+a#youtube:focus svg path,
+a#youtube:hover svg path {
+  fill: url(#youtube-bg);
+}
+
+a#twitter:focus svg path,
+a#twitter:hover svg path {
+  fill: url(#twitter-bg);
+}
+
+a#pinterest:focus svg path,
+a#pinterest:hover svg path {
+  fill: url(#pinterest-bg);
+}
+
+a#instagram:focus svg path,
+a#instagram:hover svg path {
+  fill: url(#instagram-bg);
+}
