@@ -1,0 +1,10 @@
+.gridwise {
+  display: grid;
+  grid-template-columns: var(--flower) auto var(--flower);
+}
+
+@media all and (min-width: 550px) {
+  .gridwise {
+    grid-template-columns: var(--flower) auto minmax(30px, var(--flower)) auto var(--flower);
+  }
+}

@@ -21,6 +21,103 @@
 /*   } */
 /* } */
 
+:root {
+  --slate-50: #ffffff;
+  --zinc-200: #e4e4e4;
+  --slate-300: #c4c4c4;
+  --stone-400: #a7a7a7;
+  --slate-500: #636363;
+  --slate-950: #000000;
+
+  /* --ff-sans: "DM Sans", sans-serif; */
+
+  --text-4xl: 40px;
+  --text-3xl: 32px;
+  --text-2xl: 24px;
+  --text-lg: 18px;
+  --text-base: 16px;
+  --text-sm: 14px;
+  --text-xs: 12px;
+  --text-xxs: 10px;
+
+  --fw-reg: 400;
+  --fw-bold: 700;
+
+  --responspacer: 30px;
+  --spacer: 1rem;
+}
+
+/* ******************* General Settings ****************** */
+img {
+  object-fit: cover;
+}
+
+/* ********************************* */
+.whiteboard {
+  background-color: #fff;
+}
+
+.blackboard {
+  --fore-color: #fff;
+  color: var(--slate-300);
+  background-color: #000;
+}
+
+.gridwise_1 {
+  display: grid;
+  grid-template-columns: var(--responspacer) auto var(--responspacer);
+}
+
+.grid1_pic {
+  /* border: solid 2px cyan; */
+  grid-row-start: var(--pic-row-start, 1);
+  grid-column-start: var(--pic-col-start, 1);
+  grid-row-end: var(--pic-row-end, 2);
+  grid-column-end: var(--pic-col-end, -1);
+}
+
+.grid1_pic img {
+  width: var(--grid1_pic-width, 100%);
+  height: var(--grid1_pic-height, auto);
+}
+
+/* ********************************************************************** */
+@media all and (min-width: 550px) {
+  :root {
+    --responspacer: 50px;
+    --text-3xl: 40px;
+  }
+
+  .gridwise_1 {
+    grid-template-columns: var(--responspacer) auto minmax(30px,
+        var(--responspacer)) auto var(--responspacer);
+  }
+
+  .grid1_pic {
+    justify-self: var(--pic-justify, end);
+  }
+
+  .grid1_pic img {
+    --grid1_pic-height: 100%;
+  }
+
+  .grid1_pic-right {
+    --pic-col-start: 4;
+    --pic-justify: end;
+  }
+
+  .grid1_pic-right img {
+    --grid1_pic-width: auto;
+  }
+}
+
+@media all and (min-width: 900px) {
+  :root {
+    --text-3xl: 40px;
+    --responspacer: 110px;
+  }
+}
+
 @layer base {
   :root {
     --accent-yellow: 255, 197, 147;
@@ -56,6 +153,23 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    --flower: 2rem;
+    --spacer-01: 2rem;
+    --spacer-02: 3.125rem;
+    --spacer-03: 6.875rem;
+  }
+
+  @media all and (min-width: 550px) {
+    :root {
+      --flower: 3.125rem;
+    }
+  }
+
+  @media all and (min-width: 900px) {
+    :root {
+      --flower: 6.875rem;
+    }
   }
 
   .dark {
@@ -100,7 +214,15 @@
 }
 
 .wrapper {
-  @apply mx-auto max-w-[1440px] px-sm sm:px-md md:px-lg;
+  @apply mx-auto max-w-[1440px];
+}
+
+.wrapper-padd {
+  @apply px-[var(--flower)];
+}
+
+.edging {
+  @apply bg-edging bg-no-repeat;
 }
 
 a#facebook:focus svg path,

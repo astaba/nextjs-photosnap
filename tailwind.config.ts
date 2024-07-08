@@ -28,11 +28,28 @@ const config = {
     extend: {
       screens: {
         sm: "550px",
+        md: "780px",
+        lg: "900px",
       },
       spacing: {
-        sm: "2rem",
-        md: "3.125rem",
-        lg: "6.875rem",
+        sm: "var(--spacer-01)",
+        md: "var(--spacer-02)",
+        lg: "var(--spacer-03)",
+      },
+      gridTemplateColumns: {
+        mobileCard: "var(--flower) auto var(--flower)",
+        tabletCard:
+          "var(--flower) auto minmax(var(--spacer-01), var(--flower)) auto var(--flower)",
+      },
+      backgroundImage: {
+        edging:
+          "linear-gradient( var(--edging-direction, 0deg), rgb(var(--accent-yellow)) 1%, rgb(var(--accent-purple)) 40%, rgb(var(--accent-blue)) 80%)",
+      },
+      backgroundPosition: {
+        edging: "top left",
+      },
+      backgroundSize: {
+        edging: "var(--edging-w, 100%) var(--edging-h, 100%)",
       },
       colors: {
         clr: {

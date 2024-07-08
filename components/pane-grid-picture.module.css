@@ -1,0 +1,23 @@
+.picture {
+  grid-row-start: var(--pic-row-start, 1);
+  grid-column-start: var(--pic-col-start, 1);
+  grid-row-end: var(--pic-row-end, 2);
+  grid-column-end: var(--pic-col-end, -1);
+}
+
+.img {
+  width: var(--img-width, 100%);
+  height: var(--img-height, auto);
+}
+
+@media all and (min-width: 550px) {
+  .picture {
+    justify-self: var(--pic-justify-self, end);
+  }
+
+  /* BUG: Unmanageable responsive image sizing*/
+  .img {
+    --img-height: 100%;
+    --img-width: auto;
+  }
+}

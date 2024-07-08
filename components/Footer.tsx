@@ -1,6 +1,6 @@
 import Logo from "./Logo";
 import Navig from "./Navig";
-import GetAnInvite from "./GetAnInvite";
+import ArrowLink from "./ArrowLink";
 import {
   Facebook,
   Youtube,
@@ -45,7 +45,7 @@ const socials = [
 export default function Footer() {
   return (
     <footer className="bg-slate-950 py-sm lg:py-md text-slate-50">
-      <div className="wrapper grid grid-cols-3 gap-y-sm *:justify-self-center *:col-start-1 *:-col-end-1 sm:gap-5">
+      <div className="wrapper wrapper-padd grid grid-cols-3 gap-y-sm *:justify-self-center *:col-start-1 *:-col-end-1 sm:gap-5">
         {/* Page logo */}
         <Logo
           className="sm:col-end-2 sm:self-center sm:justify-self-start"
@@ -73,7 +73,9 @@ export default function Footer() {
         />
         {/* Cta */}
         <div className="mt-md sm:col-start-3 sm:row-start-1 sm:mt-0 sm:justify-self-end">
-          <GetAnInvite className="items-center gap-[0.25em] tracking-wider hover:underline hover:underline-offset-4" />
+          <ArrowLink className="items-center gap-[0.25em] tracking-wider hover:underline hover:underline-offset-4">
+            get an invite
+          </ArrowLink>
         </div>
         {/* Copyright */}
         <p className="text-slate-400 text-sm sm:col-start-3 sm:row-start-3 sm:justify-self-end sm:text-right">

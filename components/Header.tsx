@@ -43,7 +43,7 @@ export default function Header() {
       className={`fixed inset-0 bottom-auto z-30 bg-yellow-200/35 py-6 md:py-8 ${isWindowYOffset ? "shadow-lg" : ""}`}
     >
       {/* FIX: Add horizontal padding and maximum width to container */}
-      <div className="wrapper">
+      <div className="wrapper wrapper-padd">
         <div className="flex items-center justify-between">
           <Logo />
           <div>

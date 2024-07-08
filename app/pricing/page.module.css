@@ -1,0 +1,21 @@
+.pricingCard {
+  --edging-direction: 1.5dge;
+  --edging-w: 100%;
+  --edging-h: 7px;
+}
+
+@media all and (min-width: 550px) {
+  .pricingCard {
+    --edging-direction: 87deg;
+    --edging-w: 7px;
+    --edging-h: 100%;
+  }
+}
+
+@media all and (min-width: 900px) {
+  .pricingCard {
+    --edging-direction: 1.5dge;
+    --edging-w: 100%;
+    --edging-h: 7px;
+  }
+}

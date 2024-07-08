@@ -11,7 +11,7 @@ const variants = {
 const Template = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <motion.div
+      <motion.main
         variants={variants}
         initial="hidden"
         animate="enter"
@@ -19,8 +19,8 @@ const Template = ({ children }: { children: React.ReactNode }) => {
         className="pt-20 md:pt-24"
       >
         {children}
-      </motion.div>
-      <div className="h-[4000px]"></div>
+      </motion.main>
+      <div className="h-[2000px] bg-green-300 border-4 border-solid border-red-700" />
     </>
   );
 };

@@ -1,0 +1,9 @@
+.flowiser>*:not(:first-child) {
+  margin-top: var(--spacer-01);
+}
+
+@media all and (min-width: 550px) {
+  .sideText {
+    margin: 0;
+  }
+}

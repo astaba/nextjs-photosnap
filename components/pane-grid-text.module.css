@@ -1,0 +1,57 @@
+.wrapper {
+  /* border: solid 2px yellow; */
+  grid-row-start: var(--txt-row-start, 2);
+  grid-column-start: var(--txt-col-start, 2);
+  grid-row-end: var(--txt-row-end, 3);
+  grid-column-end: var(--txt-col-end, -2);
+
+  margin-top: var(--txt-mar-top, 0);
+  margin-bottom: var(--txt-mar-bot, 0);
+  margin-left: var(--txt-mar-left, 0);
+  margin-right: var(--txt-mar-right, 0);
+
+  padding-top: var(--txt-pad-top, 0);
+  padding-bottom: var(--txt-pad-bot, 0);
+  padding-left: var(--txt-pad-left, 0);
+  padding-right: var(--txt-pad-right, 0);
+
+  display: flex;
+  flex-direction: var(--txt-flex-dir, column);
+  justify-content: var(--txt-flex-just, center);
+  align-items: var(--txt-flex-items, start);
+}
+
+.flowiser> :first-child {
+  /* border: solid 2px fuchsia; */
+  margin-top: calc(var(--flower) * 2);
+}
+
+.flowiser> :last-child {
+  margin-bottom: calc(var(--flower) * 2);
+}
+
+.flowiser> :not(:first-child) {
+  /* border: solid 2px red; */
+  margin-top: var(--spacer-01);
+}
+
+@media all and (min-width: 550px) {
+  .wrapper {
+    --txt-row-start: 1;
+    --txt-row-end: 2;
+
+    --txt-mar-top: var(--flower);
+    --txt-mar-bot: var(--flower);
+
+    --txt-pad-left: var(--flower);
+    --txt-pad-right: var(--flower);
+  }
+
+  .flowiser>*:nth-child(n) {
+    margin: 0;
+  }
+
+  .flowiser> :not(:first-child) {
+    margin-left: var(--spacer-01);
+  }
+}

@@ -1,0 +1,33 @@
+.edging {
+  --edging-direction: 3deg;
+  --edging-w: 40%;
+  --edging-h: 7px;
+}
+
+@media all and (min-width: 550px) {
+  .edging {
+    --edging-direction: 87deg;
+    --edging-w: 7px;
+    --edging-h: 100%;
+  }
+
+  .rightpic {
+    --pic-col-start: 4;
+    --pic-justify-self: end;
+    /* --img-width: auto; */
+
+    --txt-col-start: 1;
+    --txt-col-end: 4;
+    --txt-flex-items: start;
+  }
+
+  .leftpic {
+    --pic-col-end: 3;
+    --pic-justify-self: start;
+    /* --img-width: auto; */
+
+    --txt-col-start: 3;
+    --txt-col-end: -1;
+    --txt-flex-items: end;
+  }
+}
